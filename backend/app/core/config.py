@@ -19,6 +19,8 @@ class Settings(BaseSettings):
 
     PROXYCURL_API_KEY: str = ""
 
+    CORS_ORIGINS: str = "http://localhost:5173,http://localhost:3000"
+
     JWT_SECRET: str = "change-me-in-production"
     JWT_ALGORITHM: str = "HS256"
     JWT_EXPIRE_MINUTES: int = 1440

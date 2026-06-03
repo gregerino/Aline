@@ -1,6 +1,5 @@
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { executeSearch, getSavedSearches, saveSearch, deleteSearch, getSearchResults } from '../services/searchApi';
-import type { SearchResponse } from '../types';
 
 export function useSearchMutation() {
   return useMutation({
@@ -25,14 +24,22 @@ export function useSearchResults(searchId: string | null) {
 }
 
 export function useSaveSearch() {
+  const queryClient = useQueryClient();
   return useMutation({
     mutationFn: ({ searchId, name }: { searchId: string; name: string }) =>
       saveSearch(searchId, name),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['savedSearches'] });
+    },
   });
 }
 
 export function useDeleteSearch() {
+  const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (searchId: string) => deleteSearch(searchId),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['savedSearches'] });
+    },
   });
 }
