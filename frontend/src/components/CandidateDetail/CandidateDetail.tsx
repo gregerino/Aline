@@ -1,4 +1,4 @@
-import { X, MapPin, Building2, GitBranch, Star, ExternalLink, Users, UserPlus, Calendar } from 'lucide-react';
+import { X, MapPin, Building2, GitBranch, Star, ExternalLink, Users, UserPlus } from 'lucide-react';
 import type { CandidateResult } from '../../types';
 import { useFindSimilar } from '../../hooks/useCandidates';
 

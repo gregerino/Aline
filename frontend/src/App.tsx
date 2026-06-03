@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Search, Users, BookmarkCheck, LogOut, Save, Download, Sparkles, BarChart3, ChevronRight } from 'lucide-react';
+import { Search, Users, BookmarkCheck, LogOut, Save, Sparkles, BarChart3, ChevronRight } from 'lucide-react';
 import { useAuth } from './hooks/useAuth';
 import { useSearchMutation, useSavedSearches, useDeleteSearch, useSaveSearch } from './hooks/useSearch';
 import { usePool, useAddToPool, useUpdatePoolEntry, useRemoveFromPool } from './hooks/useCandidates';

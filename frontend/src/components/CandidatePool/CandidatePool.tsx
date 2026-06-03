@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Trash2, ChevronDown, MessageSquare, MapPin, Users, UserPlus } from 'lucide-react';
+import { Trash2, ChevronDown, MessageSquare, MapPin, UserPlus } from 'lucide-react';
 import type { PoolEntry } from '../../types';
 
 interface Props {
