@@ -12,6 +12,8 @@ class Settings(BaseSettings):
 
     REDIS_URL: str = "redis://localhost:6379/0"
 
+    QDRANT_URL: str = ""
+    QDRANT_API_KEY: str = ""
     QDRANT_HOST: str = "localhost"
     QDRANT_PORT: int = 6333
 
